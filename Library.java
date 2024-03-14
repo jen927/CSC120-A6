@@ -34,11 +34,7 @@ public class Library extends Building{
   public boolean isAvailable(String title){ // returns true if the title is currently available, false otherwise
     return collection.get(title).equals(true);
   }
-  //public void printCollection(){ // prints out the entire collection in an easy-to-read way (including checkout status)
-   // System.out.println("List of books in collection:");
-   // collection.forEach((key, value)
-   // -> System.out.println("Title: " + key + "\t\t Availability: " + value));
-  //}
+
   public void printCollection(){ // prints out the entire collection in an easy-to-read way (including checkout status)
     System.out.println("List of books in collection:");
     collection.forEach((key, value) -> {
@@ -58,9 +54,8 @@ public class Library extends Building{
    Library mylibrary = new Library("Neilson Libarary", "123 W ST", 4);
    mylibrary.addTitle("Clear and Muddy Loss of Love");
    mylibrary.addTitle("Grandmaster of Demonic Cultivation");
+   mylibrary.printCollection();
    mylibrary.checkOut("Clear and Muddy Loss of Love");
-   //System.out.println(mylibrary.isAvailable("Clear and Muddy Loss of Love"));
-   //System.out.println(mylibrary.collection.get("Clear and Muddy Loss of Love"));
    mylibrary.printCollection();
   }
   
